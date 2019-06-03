@@ -29,6 +29,7 @@ DEMO: https://www.youtube.com/watch?v=W-IJcC4tYFI&feature=youtu.be
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlAvt" crossorigin="anonymous">    
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
@@ -42,7 +43,7 @@ DEMO: https://www.youtube.com/watch?v=W-IJcC4tYFI&feature=youtu.be
                     <br>
                     <h1 class="card-title display-3">Mountain Hangman</h1>
                     <h4 class="card-title">Guess a famous mountain peak,</h4>
-                    <h4>letter at a time.</h4>
+                    <h4>1 letter at a time.</h4>
                 </div>
             </div>
         </div>
@@ -50,29 +51,34 @@ DEMO: https://www.youtube.com/watch?v=W-IJcC4tYFI&feature=youtu.be
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 border border-primary text-center">
-                <h2></h2>
+            <div class="col-md-6 border border-primary text-center" id="victory-image">
+                <h3></h3>
             </div>
             <div class="col-md-6 border border-primary text-center">
                 <br>
                 <h3>Press any key to get started!</h3>
                 <br>
-                <h5 class="wins">Wins: 0</h5>
+                <h5 id="wins">Wins: 0</h5>
                 <br>
                 <br>
-                <h5 class="word">Current Word:</h5>
+                <h5>Current Word:
+                    <br>
+                    <br>
+                    <p id="word"></p>
+                </h5>
+                <br>
+                <h5 id="guesses">Number of Guesses Remaining: 12</h5>
                 <br>
                 <br>
-                <h5 class="guesses">Number of Guesses Remaining: 12</h5>
+                <h5 id="guessHistory">Letters Already Guessed:</h5>
                 <br>
                 <br>
-                <h5 class="guessHistory">Letters Already Guessed:</h5>
-
+                <br>
             </div>
         </div>
     </div>
 
-    <script> type='text/javascript' src='assets/javascript/game.js'</script>
+    <script type='text/javascript' src="assets/javascript/game.js"></script>
 </body>
 
 </html>
