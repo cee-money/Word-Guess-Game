@@ -9,8 +9,18 @@
 
 h1 {
     color: black;
+    background: rgba(255,255,255,0.40);
 }
 
 header h4 {
     color: black;
+    background: rgba(255,255,255,0.40);
+}
+
+#correct-word {
+    font-size: 60px;
+}
+
+.container {
+    margin-bottom: 40px;
 }
