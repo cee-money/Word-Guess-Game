@@ -34,9 +34,10 @@ answerArrayText.textContent = answerArray.join(" ");
 
 // User keystroke to trigger a win or loss and -1 guesses left until guesses left = 0
 document.onkeyup = function(event) {
+    correctWordText.textContent = " ";
     var userGuess = event.key;
 
-    if (word.includes(userGuess)) { //condition: if the computer generated word contains the user guess and the answer array does not yet contain the guess
+    if (word.includes(userGuess) && (!answerArray.includes(userGuess))) { //condition: if the computer generated word contains the user guess and the answer array does not yet contain the guess
         for (var i = 0; i < word.length; i++) { //cycle through every letter of the word to see if it contains the user's guess
             if (userGuess === word[i]) { //if the userGuess is equal to a certain position in the word (index)
                 answerArray[i] = userGuess; // replace the _ with the guess
@@ -61,7 +62,7 @@ document.onkeyup = function(event) {
                 }
                 answerArrayText.textContent = answerArray.join(" "); // print the dashes for the length of the chose word
             }
-    } else if (guesses > 1 && !wrongGuessesArray.includes(userGuess)) {
+    } else if (guesses > 1 && !wrongGuessesArray.includes(userGuess) && !answerArray.includes(userGuess)) {
         guessHistoryText.append(" " + userGuess + " ");
         wrongGuessesArray.push(userGuess);
         guesses--;
