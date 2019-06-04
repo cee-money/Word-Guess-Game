@@ -1,5 +1,6 @@
-.card-title {
+.card-title, .card-text {
     color: black;
+    text-align: center;
 }
 
 .card {

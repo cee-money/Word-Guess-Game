@@ -83,6 +83,4 @@ document.onkeyup = function(event) {
     }
 } 
 
-// !word.includes(userGuess) && guesses > 1
-// guesses = 0
    
