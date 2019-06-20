@@ -8,17 +8,16 @@
     margin-bottom: 20px;
 }
 
-h1 {
+h1, h3, h4 {
     color: black;
     background: rgba(255,255,255,0.40);
-}
-
-header h4 {
-    color: black;
-    background: rgba(255,255,255,0.40);
+    font-family: 'Playfair Display SC', serif;
 }
 
 #correct-word {
+    color: whitesmoke;
+    background: none;
+    font-family: 'Playfair Display SC', serif;
     font-size: 60px;
 }
 
